@@ -32,7 +32,7 @@
       <a href="https://www.instagram.com/jhn.mrk.b" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.linkedin.com/in/johnmarkbayrante" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://www.tiktok.com/@jm11b" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://twitch.tv" target="_blank"><i class="fab fa-twitch"></i></a>
+      <a href="https://www.twitch.tv/jm11b" target="_blank"><i class="fab fa-twitch"></i></a>
     </div>
   </header>
   
@@ -83,29 +83,33 @@
    
   </footer>
 <script>
-let slideIndex = 0;
-showSlides();
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slides');
+  const totalSlides = slides.length;
 
-function showSlides() {
-  const slides = document.getElementsByClassName("slides");
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active", "prev");
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active', 'prev');
+      if (i === index) {
+        slide.classList.add('active');
+      } else if (i === (index - 1 + totalSlides) % totalSlides) {
+        slide.classList.add('prev');
+      }
+    });
   }
 
-  const prevIndex = (slideIndex - 1 + slides.length) % slides.length;
-  const nextIndex = (slideIndex + 1) % slides.length;
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }
 
-  slides[prevIndex].classList.add("prev");
-  slides[slideIndex].classList.add("active");
-
-  slideIndex = nextIndex;
-  setTimeout(showSlides, 3500); // Change every 3.5 seconds
-}
+  setInterval(nextSlide, 3000); // every 3 seconds
+  showSlide(currentSlide);
 </script>
 
 </body>
 </html>
+
 
 
 
