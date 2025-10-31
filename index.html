@@ -35,20 +35,19 @@
       <a href="https://twitch.tv" target="_blank"><i class="fab fa-twitch"></i></a>
     </div>
   </header>
-   <section class="slideshow">
-     <div class="slides">
-        <div class="slide fade">
-          <img src="phkhufbaby.jpg" alt="Slideshow Image 1">
-        </div>
-      <div class="slide fade">
-      <img src="phkhufbaby.jpg" alt="Slideshow Image 2">
-    </div>
-    <div class="slide fade">
-      <img src="phkhufbaby.jpg" alt="Slideshow Image 3">
-    </div>
-   </div>
-    </section>
-
+  
+  <section class="slideshow">
+      <div class="slides fade">
+        <img src="pubmat.png" alt="Slide 1">
+      </div>
+      <div class="slides fade">
+        <img src="phkhufbaby.jpg" alt="Slide 2">
+      </div>
+      <div class="slides fade">
+        <img src="awardpic.jpg" alt="Slide 3">
+      </div>
+  </section>
+  
   <!-- ABOUT SECTION -->
   <section class="about">
     <h2>About Me</h2>
@@ -80,23 +79,32 @@
     <p>Polytechnic University of the Philippines </p>
    
   </footer>
-  <script>
-    let slideIndex = 0;
-    showSlides();
-      function showSlides() {
-        let slides = document.getElementsByClassName("slide");
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 3000); // Change image every 3 seconds
-      }
-  </script>
+ <script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  const slides = document.getElementsByClassName("slides");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active", "prev");
+  }
+
+  const prevIndex = (slideIndex - 1 + slides.length) % slides.length;
+  const nextIndex = (slideIndex + 1) % slides.length;
+
+  slides[prevIndex].classList.add("prev");
+  slides[slideIndex].classList.add("active");
+
+  slideIndex = nextIndex;
+  setTimeout(showSlides, 3500); // Change every 3.5 seconds
+}
+</script>
+
 
 </body>
 </html>
+
 
 
 
