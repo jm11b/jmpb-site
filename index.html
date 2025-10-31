@@ -1,36 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Portfolio — John Mark</title>
-  <style>
-    body { font-family: system-ui, Arial; max-width:900px; margin:40px auto; line-height:1.6; padding:0 16px;}
-    header { margin-bottom:24px;}
-    h1 { margin:0; font-size:28px;}
-    p.lead { color:#444; }
-    .card { border:1px solid #eee; padding:16px; border-radius:8px; margin-top:16px; background:#fafafa;}
-    footer { margin-top:40px; color:#666; font-size:14px;}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Mark P. Bayrante | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <!-- Font & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0c4d2f4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <h1>John Mark — Student Portfolio</h1>
-    <p class="lead">This is my project site for class. I used Netlify to publish it fast.</p>
+  <header class="hero">
+    <img src="images/profile.jpg" alt="Profile Photo" class="profile-pic" />
+    <h1>John Mark P. Bayrante</h1>
+    <p class="tagline">BSIT Senior | Salesforce Developer | Graphic Designer</p>
+    <div class="social-links">
+      <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:johnmark@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
   </header>
 
-  <section class="card">
-    <h2>About</h2>
-    <p>Short intro: your name, course (BSIT), and what this site shows (project or demo).</p>
+  <section class="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m <strong>John Mark</strong>, a BSIT student passionate about blending creativity and technology. I specialize in Salesforce development and multimedia design, crafting digital solutions that stand out with purpose and aesthetic.</p>
   </section>
 
-  <section class="card">
-    <h2>Project</h2>
-    <p>Describe your project here. Add links or images in the <code>images/</code> folder if you have them.</p>
+  <section class="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Project One</h3>
+        <p>A web app for organizing digital portfolios with a clean and efficient UI.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Project Two</h3>
+        <p>Branding and UI design concept for a startup with a modern aesthetic.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>Contact: johnmark@example.com</p>
+    <p>© 2025 John Mark P. Bayrante | All Rights Reserved</p>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
   </footer>
 </body>
 </html>
