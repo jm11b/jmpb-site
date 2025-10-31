@@ -95,12 +95,13 @@ h2 {
 /* ===== Slideshow Styles ===== */
 .slideshow {
   position: relative;
-  max-width: 900px;
-  height: 400px;
+  width: 100%;
+  max-width: 1000px; /* Adjust as needed */
   margin: 40px auto;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 0 20px #00ffff33;
+  aspect-ratio: 16/9; /* Keeps the proper video-like proportion */
 }
 
 .slides {
@@ -124,9 +125,14 @@ h2 {
 .slides img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Keeps images filling without stretching */
+  object-position: center;
 }
-
+@media (max-width: 768px) {
+  .slideshow {
+    aspect-ratio: 4/3;
+  }
+}
 .about p {
   font-size: 1rem;
   color: #dcdcdc;
