@@ -93,38 +93,28 @@ h2 {
   text-align: center;
 }
 /* ===== Slideshow Styles ===== */
-.slideshow {
+.slideshow-container {
   position: relative;
-  max-width: 900px;
-  height: 400px;
-  margin: 40px auto;
+  width: 100%;
+  height: 400px; /* you can adjust this height (e.g. 450px, 500px) */
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 0 20px #00ffff33;
+  margin: 40px 0;
 }
 
-.slides {
-  position: absolute;
+.mySlides {
+  display: none;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: transform 1s ease, opacity 1s ease;
 }
 
-.slides.active {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.slides.prev {
-  transform: translateX(-100%);
-}
-
-.slides img {
+.mySlides img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* fills the area without distortion */
+  object-position: center; /* keeps image centered */
+  border-radius: 12px;
+  transition: transform 1s ease-in-out;
 }
 
 @keyframes fadeEffect {
