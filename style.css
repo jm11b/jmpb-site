@@ -38,6 +38,33 @@ h1 {
   color: #b5b5b5;
 }
 
+/* Socials */
+.socials {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.socials a {
+  color: #00bcd4;
+  font-size: 1.6em;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  color: #fff;
+  transform: translateY(-5px) scale(1.1);
+  text-shadow: 0 0 10px #00bcd4;
+}
+
+.about {
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.7;
+  color: #ccc;
+}
+
 .social-links {
   margin-top: 20px;
 }
