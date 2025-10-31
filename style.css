@@ -193,22 +193,13 @@ h2 {
   height: 100%; /* ensure container has a defined height */
 }
 
-.btn {
-  display: inline-block;
-  background-color: #00ffff;
-  color: #0d0d0d;
-  padding: 8px 15px;
-  border-radius: 6px;
-  font-weight: 600;
+.btn { display: inline-block; 
+  background-color: #00ffff; 
+  color: #0d0d0d; padding: 8px 15px;
+  border-radius: 6px; font-weight: 600; 
   text-decoration: none;
   text-align: center;
-  transition: all 0.3s ease;
-
-  position: absolute; /* position relative to container */
-  bottom: 10px;       /* space from bottom */
-  left: 50%;          /* center horizontally */
-  transform: translateX(-50%); /* adjust centering */
-}
+  transition: all 0.3s ease; }
 
 .btn:hover {
   background-color: #00cccc;
