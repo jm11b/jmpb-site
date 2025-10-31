@@ -185,6 +185,14 @@ h2 {
   margin-bottom: 20px;
 }
 
+.container {
+  position: relative; /* make this the positioning reference */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%; /* ensure container has a defined height */
+}
+
 .btn {
   display: inline-block;
   background-color: #00ffff;
@@ -195,6 +203,11 @@ h2 {
   text-decoration: none;
   text-align: center;
   transition: all 0.3s ease;
+
+  position: absolute; /* position relative to container */
+  bottom: 10px;       /* space from bottom */
+  left: 50%;          /* center horizontally */
+  transform: translateX(-50%); /* adjust centering */
 }
 
 .btn:hover {
