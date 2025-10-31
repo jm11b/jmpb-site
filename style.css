@@ -93,33 +93,38 @@ h2 {
   text-align: center;
 }
 /* ===== Slideshow Styles ===== */
-.slideshow-container {
+.slideshow {
   position: relative;
-  width: 100%;
-  height: 400px; /* you can adjust this height (e.g. 450px, 500px) */
+  max-width: 900px;
+  height: 400px;
+  margin: 40px auto;
   overflow: hidden;
   border-radius: 12px;
-  margin: 40px 0;
+  box-shadow: 0 0 20px #00ffff33;
 }
 
-.mySlides {
-  display: none;
+.slides {
+  position: absolute;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease, opacity 1s ease;
 }
 
-.mySlides img {
+.slides.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slides.prev {
+  transform: translateX(-100%);
+}
+
+.slides img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* fills the area without distortion */
-  object-position: center; /* keeps image centered */
-  border-radius: 12px;
-  transition: transform 1s ease-in-out;
-}
-
-@keyframes fadeEffect {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
+  object-fit: cover;
 }
 
 .about p {
@@ -208,5 +213,31 @@ footer {
   .profile-pic {
     width: 120px;
     height: 120px;
+
+    /* Floating Button */
+.floating-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #00bcd4;
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  z-index: 999; /* stays above everything */
+  text-decoration: none;
+}
+
+.floating-btn:hover {
+  background-color: #0097a7;
+  transform: scale(1.1);
+}
+
   }
 }
