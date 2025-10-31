@@ -40,24 +40,23 @@ h1 {
 
 /* Socials */
 .socials {
+  margin-top: 25px; /* Moves the icons slightly lower */
   display: flex;
-  gap: 20px;
   justify-content: center;
-  margin-bottom: 40px;
+  gap: 20px;
 }
 
 .socials a {
-  color: #00bcd4;
-  font-size: 1.6em;
-  transition: all 0.3s ease;
-}
-
-.socials a:hover {
   color: #fff;
-  transform: translateY(-5px) scale(1.1);
-  text-shadow: 0 0 10px #00bcd4;
+  font-size: 30px; /* Makes the icons larger */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
+/* Hover animation */
+.socials a:hover {
+  color: #00bcd4; /* Accent color when hovered */
+  transform: scale(1.2); /*Slightly enlarges the icon */
+}
 .about {
   max-width: 600px;
   text-align: center;
