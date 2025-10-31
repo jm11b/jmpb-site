@@ -79,31 +79,29 @@
     <p>Polytechnic University of the Philippines </p>
    
   </footer>
- <script>
-let slideIndex = 0;
-showSlides();
+<script>
+  let slideIndex = 0;
+  showSlides();
 
-function showSlides() {
-  const slides = document.getElementsByClassName("slides");
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active", "prev");
+  function showSlides() {
+    const slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      slides[i].style.transform = "translateX(100%)"; // start from right
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    slides[slideIndex - 1].style.transform = "translateX(0)";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
   }
-
-  const prevIndex = (slideIndex - 1 + slides.length) % slides.length;
-  const nextIndex = (slideIndex + 1) % slides.length;
-
-  slides[prevIndex].classList.add("prev");
-  slides[slideIndex].classList.add("active");
-
-  slideIndex = nextIndex;
-  setTimeout(showSlides, 3500); // Change every 3.5 seconds
-}
 </script>
+
 
 
 </body>
 </html>
+
 
 
 
